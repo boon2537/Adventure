@@ -1,0 +1,17 @@
+<AdventureDefinitions>
+
+  <AdventureDefinition name="Flower" title="Kill the Flower">
+    <StartConditions startMap="The Field" startOnTileType="Grass"/>
+    <VictoryConditions haveDied="Dark One"/>
+    <Map name="The Field" mapDefinition="Field">
+      <Portal type="TeleportEnter" onTileType="Grass" toMap="The RockyHill" toTileType="Grass" reciprocalType="TeleportExit"/>
+    </Map>
+    <Map name="The RockyHill" mapDefinition="RockyHill">
+      <Portal type="TeleportEnter" onTileType="Grass" toMap ="The Forest" toTileType="Grass" reciprocalType="TeleportExit"/>
+    </Map>
+    <Map name="The Forest" mapDefinition="Forest">
+      <Actor type="Dark One" onTileType="Grass"/>
+    </Map>
+  </AdventureDefinition>
+
+</AdventureDefinitions>

@@ -1,0 +1,23 @@
+<PortalDefinitions>
+
+  <PortalDefinition name="TeleportEnter">
+    <Size physicsRadius="0.4"  drawRadius="0.4"/>
+    <Movement>
+      <Fly speed="0.0"/>
+    </Movement>
+    <SpriteAnimSet spriteSheet="PortalEnter.png" spriteLayout="1,1">
+      <SpriteAnim name="Idle" spriteIndexes="0"/>
+    </SpriteAnimSet>
+  </PortalDefinition>
+
+  <PortalDefinition name="TeleportExit">
+    <Size physicsRadius="0.4"  drawRadius="0.4"/>
+    <Movement>
+      <Fly speed="0.0"/>
+    </Movement>
+    <SpriteAnimSet spriteSheet="PortalExit.png" spriteLayout="1,1">
+      <SpriteAnim name="Idle" spriteIndexes="0"/>
+    </SpriteAnimSet>
+  </PortalDefinition>
+
+</PortalDefinitions>

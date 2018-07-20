@@ -1,0 +1,370 @@
+<ItemDefinitions>
+
+  <ItemDefinition name="Sword">
+    <Size physicsRadius="0.25" localDrawBounds="-1.8,-2.1,1.8,2.7"/>
+    <Movement>
+      <Walk speed="0"/>
+    </Movement>
+    <SpriteAnimSet spriteSheet="glowsword_blue_male.png" spriteLayout="6,4" fps="10">
+      <SpriteAnim name="MoveWest"		spriteIndexes="6"/>
+      <SpriteAnim name="MoveEast"		spriteIndexes="18"/>
+      <SpriteAnim name="MoveNorth"	spriteIndexes="0"/>
+      <SpriteAnim name="MoveSouth"	spriteIndexes="12"/>
+      <SpriteAnim name="SlashWest"	spriteIndexes="6,7,8,9,10,11"/>
+      <SpriteAnim name="SlashSouth"	spriteIndexes="12,13,14,15,16,17"/>
+      <SpriteAnim name="SlashEast"	spriteIndexes="18,19,20,21,22,23"/>
+      <SpriteAnim name="SlashNorth"	spriteIndexes="0,1,2,3,4,5"/>
+      <SpriteAnim name="Idle"		    spriteIndexes="12" fps="3"/>
+    </SpriteAnimSet>
+    <Equip slot="0" dropOnDeath="false" equippedDrawBounds="-1.8,-2.1,1.8,2.7"/>
+  </ItemDefinition>
+
+  <ItemDefinition name="Fire Hat">
+    <Size physicsRadius="0.4" localDrawBounds="-0.45,-0.65,0.45,0.25" tint="255,0,0"/>
+    <Movement>
+      <Walk speed="0"/>
+    </Movement>
+    <SpriteAnimSet spriteSheet="leather_cap_male.png" spriteLayout="13,21" fps="10">
+      <SpriteAnim name="MoveEast"		spriteIndexes="143,144,145,146,147,148,149,150,151"/>
+      <SpriteAnim name="MoveWest"		spriteIndexes="117,118,119,120,121,122,123,124,125"/>
+      <SpriteAnim name="MoveNorth"	spriteIndexes="105,106,107,108,109,110,111,112"/>
+      <SpriteAnim name="MoveSouth"	spriteIndexes="131,132,133,134,135,136,137,138"/>
+      <SpriteAnim name="SlashEast"	spriteIndexes="195,196,197,198,199,200"/>
+      <SpriteAnim name="SlashSouth"	spriteIndexes="182,183,184,185,186,187"/>
+      <SpriteAnim name="SlashWest"	spriteIndexes="169,170,171,172,173,174"/>
+      <SpriteAnim name="SlashNorth"	spriteIndexes="156,157,158,159,160,161"/>
+      <SpriteAnim name="CastEast"	  mode="once" spriteIndexes="39,40,41,42,43,44,45"/>
+      <SpriteAnim name="CastSouth"	mode="once" spriteIndexes="26,27,28,29,30,31,32"/>
+      <SpriteAnim name="CastWest"	  mode="once" spriteIndexes="13,14,15,16,17,18,19"/>
+      <SpriteAnim name="CastNorth"	mode="once" spriteIndexes="0,1,2,3,4,5,6"/>
+      <SpriteAnim name="Idle"		    spriteIndexes="130" fps="3"/>
+    </SpriteAnimSet>
+    <Equip slot="1" dropOnDeath="true" equippedDrawBounds="-0.6,-0.3,0.6,0.9"/>
+    <MinStats fire_atk="15" water_def="-15"/>
+  </ItemDefinition>
+
+  <ItemDefinition name="Water Hat">
+    <Size physicsRadius="0.4" localDrawBounds="-0.45,-0.65,0.45,0.25" tint="0,0,255"/>
+    <Movement>
+      <Walk speed="0"/>
+    </Movement>
+    <SpriteAnimSet spriteSheet="leather_cap_male.png" spriteLayout="13,21" fps="10">
+      <SpriteAnim name="MoveEast"		spriteIndexes="143,144,145,146,147,148,149,150,151"/>
+      <SpriteAnim name="MoveWest"		spriteIndexes="117,118,119,120,121,122,123,124,125"/>
+      <SpriteAnim name="MoveNorth"	spriteIndexes="105,106,107,108,109,110,111,112"/>
+      <SpriteAnim name="MoveSouth"	spriteIndexes="131,132,133,134,135,136,137,138"/>
+      <SpriteAnim name="SlashEast"	spriteIndexes="195,196,197,198,199,200"/>
+      <SpriteAnim name="SlashSouth"	spriteIndexes="182,183,184,185,186,187"/>
+      <SpriteAnim name="SlashWest"	spriteIndexes="169,170,171,172,173,174"/>
+      <SpriteAnim name="SlashNorth"	spriteIndexes="156,157,158,159,160,161"/>
+      <SpriteAnim name="CastEast"	  mode="once" spriteIndexes="39,40,41,42,43,44,45"/>
+      <SpriteAnim name="CastSouth"	mode="once" spriteIndexes="26,27,28,29,30,31,32"/>
+      <SpriteAnim name="CastWest"	  mode="once" spriteIndexes="13,14,15,16,17,18,19"/>
+      <SpriteAnim name="CastNorth"	mode="once" spriteIndexes="0,1,2,3,4,5,6"/>
+      <SpriteAnim name="Idle"		    spriteIndexes="130" fps="3"/>
+    </SpriteAnimSet>
+    <Equip slot="1" dropOnDeath="true" equippedDrawBounds="-0.6,-0.3,0.6,0.9"/>
+    <MinStats water_atk="15" earth_def="-15"/>
+  </ItemDefinition>
+      
+   <ItemDefinition name="Earth Hat">
+    <Size physicsRadius="0.4" localDrawBounds="-0.45,-0.65,0.45,0.25" tint="0,255,0"/>
+    <Movement>
+      <Walk speed="0"/>
+    </Movement>
+    <SpriteAnimSet spriteSheet="leather_cap_male.png" spriteLayout="13,21" fps="10">
+      <SpriteAnim name="MoveEast"		spriteIndexes="143,144,145,146,147,148,149,150,151"/>
+      <SpriteAnim name="MoveWest"		spriteIndexes="117,118,119,120,121,122,123,124,125"/>
+      <SpriteAnim name="MoveNorth"	spriteIndexes="105,106,107,108,109,110,111,112"/>
+      <SpriteAnim name="MoveSouth"	spriteIndexes="131,132,133,134,135,136,137,138"/>
+      <SpriteAnim name="SlashEast"	spriteIndexes="195,196,197,198,199,200"/>
+      <SpriteAnim name="SlashSouth"	spriteIndexes="182,183,184,185,186,187"/>
+      <SpriteAnim name="SlashWest"	spriteIndexes="169,170,171,172,173,174"/>
+      <SpriteAnim name="SlashNorth"	spriteIndexes="156,157,158,159,160,161"/>
+      <SpriteAnim name="CastEast"	  mode="once" spriteIndexes="39,40,41,42,43,44,45"/>
+      <SpriteAnim name="CastSouth"	mode="once" spriteIndexes="26,27,28,29,30,31,32"/>
+      <SpriteAnim name="CastWest"	  mode="once" spriteIndexes="13,14,15,16,17,18,19"/>
+      <SpriteAnim name="CastNorth"	mode="once" spriteIndexes="0,1,2,3,4,5,6"/>
+      <SpriteAnim name="Idle"		    spriteIndexes="130" fps="3"/>
+    </SpriteAnimSet>
+    <Equip slot="1" dropOnDeath="true" equippedDrawBounds="-0.6,-0.3,0.6,0.9"/>
+    <MinStats earth_atk="15" fire_def="-15"/>
+  </ItemDefinition>
+  
+  <ItemDefinition name="Fire Shirt">
+    <Size physicsRadius="0.4" localDrawBounds="-0.5,-0.4,0.5,0.6" tint="255,0,0"/>
+    <Movement>
+      <Walk speed="0"/>
+    </Movement>
+    <SpriteAnimSet spriteSheet="white_longsleeve.png" spriteLayout="13,21" fps="10">
+      <SpriteAnim name="MoveEast"		spriteIndexes="143,144,145,146,147,148,149,150,151"/>
+      <SpriteAnim name="MoveWest"		spriteIndexes="117,118,119,120,121,122,123,124,125"/>
+      <SpriteAnim name="MoveNorth"	spriteIndexes="105,106,107,108,109,110,111,112"/>
+      <SpriteAnim name="MoveSouth"	spriteIndexes="131,132,133,134,135,136,137,138"/>
+      <SpriteAnim name="SlashEast"	spriteIndexes="195,196,197,198,199,200"/>
+      <SpriteAnim name="SlashSouth"	spriteIndexes="182,183,184,185,186,187"/>
+      <SpriteAnim name="SlashWest"	spriteIndexes="169,170,171,172,173,174"/>
+      <SpriteAnim name="SlashNorth"	spriteIndexes="156,157,158,159,160,161"/>
+      <SpriteAnim name="CastEast"	  mode="once" spriteIndexes="39,40,41,42,43,44,45"/>
+      <SpriteAnim name="CastSouth"	mode="once" spriteIndexes="26,27,28,29,30,31,32"/>
+      <SpriteAnim name="CastWest"	  mode="once" spriteIndexes="13,14,15,16,17,18,19"/>
+      <SpriteAnim name="CastNorth"	mode="once" spriteIndexes="0,1,2,3,4,5,6"/>
+      <SpriteAnim name="Idle"		    spriteIndexes="130" fps="3"/>
+    </SpriteAnimSet>
+    <Equip slot="3" dropOnDeath="true" equippedDrawBounds="-0.6,-0.3,0.6,0.9"/>
+    <MinStats water_atk="-15" fire_def="15"/>
+  </ItemDefinition>
+  
+  <ItemDefinition name="Water Shirt">
+    <Size physicsRadius="0.4" localDrawBounds="-0.5,-0.4,0.5,0.6" tint="0,0,255"/>
+    <Movement>
+      <Walk speed="0"/>
+    </Movement>
+    <SpriteAnimSet spriteSheet="white_longsleeve.png" spriteLayout="13,21" fps="10">
+      <SpriteAnim name="MoveEast"		spriteIndexes="143,144,145,146,147,148,149,150,151"/>
+      <SpriteAnim name="MoveWest"		spriteIndexes="117,118,119,120,121,122,123,124,125"/>
+      <SpriteAnim name="MoveNorth"	spriteIndexes="105,106,107,108,109,110,111,112"/>
+      <SpriteAnim name="MoveSouth"	spriteIndexes="131,132,133,134,135,136,137,138"/>
+      <SpriteAnim name="SlashEast"	spriteIndexes="195,196,197,198,199,200"/>
+      <SpriteAnim name="SlashSouth"	spriteIndexes="182,183,184,185,186,187"/>
+      <SpriteAnim name="SlashWest"	spriteIndexes="169,170,171,172,173,174"/>
+      <SpriteAnim name="SlashNorth"	spriteIndexes="156,157,158,159,160,161"/>
+      <SpriteAnim name="CastEast"	  mode="once" spriteIndexes="39,40,41,42,43,44,45"/>
+      <SpriteAnim name="CastSouth"	mode="once" spriteIndexes="26,27,28,29,30,31,32"/>
+      <SpriteAnim name="CastWest"	  mode="once" spriteIndexes="13,14,15,16,17,18,19"/>
+      <SpriteAnim name="CastNorth"	mode="once" spriteIndexes="0,1,2,3,4,5,6"/>
+      <SpriteAnim name="Idle"		    spriteIndexes="130" fps="3"/>
+    </SpriteAnimSet>
+    <Equip slot="3" dropOnDeath="true" equippedDrawBounds="-0.6,-0.3,0.6,0.9"/>
+    <MinStats earth_atk="-15" water_def="15"/>
+  </ItemDefinition>
+      
+  <ItemDefinition name="Earth Shirt">
+    <Size physicsRadius="0.4" localDrawBounds="-0.5,-0.4,0.5,0.6" tint="0,255,0"/>
+    <Movement>
+      <Walk speed="0"/>
+    </Movement>
+    <SpriteAnimSet spriteSheet="white_longsleeve.png" spriteLayout="13,21" fps="10">
+      <SpriteAnim name="MoveEast"		spriteIndexes="143,144,145,146,147,148,149,150,151"/>
+      <SpriteAnim name="MoveWest"		spriteIndexes="117,118,119,120,121,122,123,124,125"/>
+      <SpriteAnim name="MoveNorth"	spriteIndexes="105,106,107,108,109,110,111,112"/>
+      <SpriteAnim name="MoveSouth"	spriteIndexes="131,132,133,134,135,136,137,138"/>
+      <SpriteAnim name="SlashEast"	spriteIndexes="195,196,197,198,199,200"/>
+      <SpriteAnim name="SlashSouth"	spriteIndexes="182,183,184,185,186,187"/>
+      <SpriteAnim name="SlashWest"	spriteIndexes="169,170,171,172,173,174"/>
+      <SpriteAnim name="SlashNorth"	spriteIndexes="156,157,158,159,160,161"/>
+      <SpriteAnim name="CastEast"	  mode="once" spriteIndexes="39,40,41,42,43,44,45"/>
+      <SpriteAnim name="CastSouth"	mode="once" spriteIndexes="26,27,28,29,30,31,32"/>
+      <SpriteAnim name="CastWest"	  mode="once" spriteIndexes="13,14,15,16,17,18,19"/>
+      <SpriteAnim name="CastNorth"	mode="once" spriteIndexes="0,1,2,3,4,5,6"/>
+      <SpriteAnim name="Idle"		    spriteIndexes="130" fps="3"/>
+    </SpriteAnimSet>
+    <Equip slot="3" dropOnDeath="true" equippedDrawBounds="-0.6,-0.3,0.6,0.9"/>
+    <MinStats water_atk="-15" earth_def="15"/>
+  </ItemDefinition>
+
+  <ItemDefinition name="Violet Dress">
+    <Size physicsRadius="0.4" localDrawBounds="-0.5,-0.4,0.5,0.6" tint="255,0,255"/>
+    <Movement>
+      <Walk speed="0"/>
+    </Movement>
+    <SpriteAnimSet spriteSheet="underdress.png" spriteLayout="13,21" fps="10">
+      <SpriteAnim name="MoveEast"		spriteIndexes="143,144,145,146,147,148,149,150,151"/>
+      <SpriteAnim name="MoveWest"		spriteIndexes="117,118,119,120,121,122,123,124,125"/>
+      <SpriteAnim name="MoveNorth"	spriteIndexes="105,106,107,108,109,110,111,112"/>
+      <SpriteAnim name="MoveSouth"	spriteIndexes="131,132,133,134,135,136,137,138"/>
+      <SpriteAnim name="SlashEast"	spriteIndexes="195,196,197,198,199,200"/>
+      <SpriteAnim name="SlashSouth"	spriteIndexes="182,183,184,185,186,187"/>
+      <SpriteAnim name="SlashWest"	spriteIndexes="169,170,171,172,173,174"/>
+      <SpriteAnim name="SlashNorth"	spriteIndexes="156,157,158,159,160,161"/>
+      <SpriteAnim name="CastEast"	  mode="once" spriteIndexes="39,40,41,42,43,44,45"/>
+      <SpriteAnim name="CastSouth"	mode="once" spriteIndexes="26,27,28,29,30,31,32"/>
+      <SpriteAnim name="CastWest"	  mode="once" spriteIndexes="13,14,15,16,17,18,19"/>
+      <SpriteAnim name="CastNorth"	mode="once" spriteIndexes="0,1,2,3,4,5,6"/>
+      <SpriteAnim name="Idle"		    spriteIndexes="130" fps="3"/>
+    </SpriteAnimSet>
+    <Equip slot="3" dropOnDeath="true" equippedDrawBounds="-0.6,-0.3,0.6,0.9"/>
+    <MinStats fire_atk="-10" water_atk="-10" fire_def="15" water_def="15"/>
+  </ItemDefinition>
+
+  <ItemDefinition name="Tranquil Dress">
+    <Size physicsRadius="0.4" localDrawBounds="-0.5,-0.4,0.5,0.6" tint="0,255,255"/>
+    <Movement>
+      <Walk speed="0"/>
+    </Movement>
+    <SpriteAnimSet spriteSheet="underdress.png" spriteLayout="13,21" fps="10">
+      <SpriteAnim name="MoveEast"		spriteIndexes="143,144,145,146,147,148,149,150,151"/>
+      <SpriteAnim name="MoveWest"		spriteIndexes="117,118,119,120,121,122,123,124,125"/>
+      <SpriteAnim name="MoveNorth"	spriteIndexes="105,106,107,108,109,110,111,112"/>
+      <SpriteAnim name="MoveSouth"	spriteIndexes="131,132,133,134,135,136,137,138"/>
+      <SpriteAnim name="SlashEast"	spriteIndexes="195,196,197,198,199,200"/>
+      <SpriteAnim name="SlashSouth"	spriteIndexes="182,183,184,185,186,187"/>
+      <SpriteAnim name="SlashWest"	spriteIndexes="169,170,171,172,173,174"/>
+      <SpriteAnim name="SlashNorth"	spriteIndexes="156,157,158,159,160,161"/>
+      <SpriteAnim name="CastEast"	  mode="once" spriteIndexes="39,40,41,42,43,44,45"/>
+      <SpriteAnim name="CastSouth"	mode="once" spriteIndexes="26,27,28,29,30,31,32"/>
+      <SpriteAnim name="CastWest"	  mode="once" spriteIndexes="13,14,15,16,17,18,19"/>
+      <SpriteAnim name="CastNorth"	mode="once" spriteIndexes="0,1,2,3,4,5,6"/>
+      <SpriteAnim name="Idle"		    spriteIndexes="130" fps="3"/>
+    </SpriteAnimSet>
+    <Equip slot="3" dropOnDeath="true" equippedDrawBounds="-0.6,-0.3,0.6,0.9"/>
+    <MinStats earth_atk="-10" water_atk="-10" earth_def="15" water_def="15"/>
+  </ItemDefinition>
+
+  <ItemDefinition name="Bright Dress">
+    <Size physicsRadius="0.4" localDrawBounds="-0.5,-0.4,0.5,0.6" tint="255,255,0"/>
+    <Movement>
+      <Walk speed="0"/>
+    </Movement>
+    <SpriteAnimSet spriteSheet="underdress.png" spriteLayout="13,21" fps="10">
+      <SpriteAnim name="MoveEast"		spriteIndexes="143,144,145,146,147,148,149,150,151"/>
+      <SpriteAnim name="MoveWest"		spriteIndexes="117,118,119,120,121,122,123,124,125"/>
+      <SpriteAnim name="MoveNorth"	spriteIndexes="105,106,107,108,109,110,111,112"/>
+      <SpriteAnim name="MoveSouth"	spriteIndexes="131,132,133,134,135,136,137,138"/>
+      <SpriteAnim name="SlashEast"	spriteIndexes="195,196,197,198,199,200"/>
+      <SpriteAnim name="SlashSouth"	spriteIndexes="182,183,184,185,186,187"/>
+      <SpriteAnim name="SlashWest"	spriteIndexes="169,170,171,172,173,174"/>
+      <SpriteAnim name="SlashNorth"	spriteIndexes="156,157,158,159,160,161"/>
+      <SpriteAnim name="CastEast"	  mode="once" spriteIndexes="39,40,41,42,43,44,45"/>
+      <SpriteAnim name="CastSouth"	mode="once" spriteIndexes="26,27,28,29,30,31,32"/>
+      <SpriteAnim name="CastWest"	  mode="once" spriteIndexes="13,14,15,16,17,18,19"/>
+      <SpriteAnim name="CastNorth"	mode="once" spriteIndexes="0,1,2,3,4,5,6"/>
+      <SpriteAnim name="Idle"		    spriteIndexes="130" fps="3"/>
+    </SpriteAnimSet>
+    <Equip slot="3" dropOnDeath="true" equippedDrawBounds="-0.6,-0.3,0.6,0.9"/>
+    <MinStats earth_atk="-10" fire_atk="-10" earth_def="15" fire_def="15"/>
+  </ItemDefinition> 
+  
+  <ItemDefinition name="Chain Mail of Protection">
+    <Size physicsRadius="0.4" localDrawBounds="-0.5,-0.4,0.5,0.6"/>
+    <Movement>
+      <Walk speed="0"/>
+    </Movement>
+    <SpriteAnimSet spriteSheet="mail_male.png" spriteLayout="13,21" fps="10">
+      <SpriteAnim name="MoveEast"		spriteIndexes="143,144,145,146,147,148,149,150,151"/>
+      <SpriteAnim name="MoveWest"		spriteIndexes="117,118,119,120,121,122,123,124,125"/>
+      <SpriteAnim name="MoveNorth"	spriteIndexes="105,106,107,108,109,110,111,112"/>
+      <SpriteAnim name="MoveSouth"	spriteIndexes="131,132,133,134,135,136,137,138"/>
+      <SpriteAnim name="SlashEast"	spriteIndexes="195,196,197,198,199,200"/>
+      <SpriteAnim name="SlashSouth"	spriteIndexes="182,183,184,185,186,187"/>
+      <SpriteAnim name="SlashWest"	spriteIndexes="169,170,171,172,173,174"/>
+      <SpriteAnim name="SlashNorth"	spriteIndexes="156,157,158,159,160,161"/>
+      <SpriteAnim name="CastEast"	  mode="once" spriteIndexes="39,40,41,42,43,44,45"/>
+      <SpriteAnim name="CastSouth"	mode="once" spriteIndexes="26,27,28,29,30,31,32"/>
+      <SpriteAnim name="CastWest"	  mode="once" spriteIndexes="13,14,15,16,17,18,19"/>
+      <SpriteAnim name="CastNorth"	mode="once" spriteIndexes="0,1,2,3,4,5,6"/>
+      <SpriteAnim name="Idle"		    spriteIndexes="130" fps="3"/>
+    </SpriteAnimSet>
+    <Equip slot="3" dropOnDeath="true" equippedDrawBounds="-0.6,-0.3,0.6,0.9"/>
+    <MinStats fire_def="25" water_def="25" earth_def="25"/>
+  </ItemDefinition>
+  
+  <ItemDefinition name="Iron Crown of Elements">
+    <Size physicsRadius="0.4" localDrawBounds="-0.45,-0.65,0.45,0.25"/>
+    <Movement>
+      <Walk speed="0"/>
+    </Movement>
+    <SpriteAnimSet spriteSheet="Crown_Iron.png" spriteLayout="13,21" fps="10">
+      <SpriteAnim name="MoveEast"		spriteIndexes="143,144,145,146,147,148,149,150,151"/>
+      <SpriteAnim name="MoveWest"		spriteIndexes="117,118,119,120,121,122,123,124,125"/>
+      <SpriteAnim name="MoveNorth"	spriteIndexes="105,106,107,108,109,110,111,112"/>
+      <SpriteAnim name="MoveSouth"	spriteIndexes="131,132,133,134,135,136,137,138"/>
+      <SpriteAnim name="SlashEast"	spriteIndexes="195,196,197,198,199,200"/>
+      <SpriteAnim name="SlashSouth"	spriteIndexes="182,183,184,185,186,187"/>
+      <SpriteAnim name="SlashWest"	spriteIndexes="169,170,171,172,173,174"/>
+      <SpriteAnim name="SlashNorth"	spriteIndexes="156,157,158,159,160,161"/>
+      <SpriteAnim name="CastEast"	  mode="once" spriteIndexes="39,40,41,42,43,44,45"/>
+      <SpriteAnim name="CastSouth"	mode="once" spriteIndexes="26,27,28,29,30,31,32"/>
+      <SpriteAnim name="CastWest"	  mode="once" spriteIndexes="13,14,15,16,17,18,19"/>
+      <SpriteAnim name="CastNorth"	mode="once" spriteIndexes="0,1,2,3,4,5,6"/>
+      <SpriteAnim name="Idle"		    spriteIndexes="130" fps="3"/>
+    </SpriteAnimSet>
+    <Equip slot="1" dropOnDeath="true" equippedDrawBounds="-0.6,-0.3,0.6,0.9"/>
+    <MinStats fire_atk="10" water_atk="10" earth_atk="10"/>
+  </ItemDefinition>
+  
+  <ItemDefinition name="Gambler's Hat">
+    <Size physicsRadius="0.4" localDrawBounds="-0.45,-0.65,0.45,0.25"/>
+    <Movement>
+      <Walk speed="0"/>
+    </Movement>
+    <SpriteAnimSet spriteSheet="wizard_hat_male.png" spriteLayout="13,21" fps="10">
+      <SpriteAnim name="MoveEast"		spriteIndexes="143,144,145,146,147,148,149,150,151"/>
+      <SpriteAnim name="MoveWest"		spriteIndexes="117,118,119,120,121,122,123,124,125"/>
+      <SpriteAnim name="MoveNorth"	spriteIndexes="105,106,107,108,109,110,111,112"/>
+      <SpriteAnim name="MoveSouth"	spriteIndexes="131,132,133,134,135,136,137,138"/>
+      <SpriteAnim name="SlashEast"	spriteIndexes="195,196,197,198,199,200"/>
+      <SpriteAnim name="SlashSouth"	spriteIndexes="182,183,184,185,186,187"/>
+      <SpriteAnim name="SlashWest"	spriteIndexes="169,170,171,172,173,174"/>
+      <SpriteAnim name="SlashNorth"	spriteIndexes="156,157,158,159,160,161"/>
+      <SpriteAnim name="CastEast"	  mode="once" spriteIndexes="39,40,41,42,43,44,45"/>
+      <SpriteAnim name="CastSouth"	mode="once" spriteIndexes="26,27,28,29,30,31,32"/>
+      <SpriteAnim name="CastWest"	  mode="once" spriteIndexes="13,14,15,16,17,18,19"/>
+      <SpriteAnim name="CastNorth"	mode="once" spriteIndexes="0,1,2,3,4,5,6"/>
+      <SpriteAnim name="Idle"		    spriteIndexes="130" fps="3"/>
+    </SpriteAnimSet>
+    <Equip slot="1" dropOnDeath="true" equippedDrawBounds="-0.6,-0.3,0.6,0.9"/>
+    <MinStats fire_atk="-20" water_atk="-20" earth_atk="-20"/>
+    <MaxStats fire_atk="20" water_atk="20" earth_atk="20"/>
+  </ItemDefinition>
+
+  <ItemDefinition name="Muted Dress">
+    <Size physicsRadius="0.4" localDrawBounds="-0.5,-0.4,0.5,0.6" tint="100,100,100"/>
+    <Movement>
+      <Walk speed="0"/>
+    </Movement>
+    <SpriteAnimSet spriteSheet="overskirt.png" spriteLayout="13,21" fps="10">
+      <SpriteAnim name="MoveEast"		spriteIndexes="143,144,145,146,147,148,149,150,151"/>
+      <SpriteAnim name="MoveWest"		spriteIndexes="117,118,119,120,121,122,123,124,125"/>
+      <SpriteAnim name="MoveNorth"	spriteIndexes="105,106,107,108,109,110,111,112"/>
+      <SpriteAnim name="MoveSouth"	spriteIndexes="131,132,133,134,135,136,137,138"/>
+      <SpriteAnim name="SlashEast"	spriteIndexes="195,196,197,198,199,200"/>
+      <SpriteAnim name="SlashSouth"	spriteIndexes="182,183,184,185,186,187"/>
+      <SpriteAnim name="SlashWest"	spriteIndexes="169,170,171,172,173,174"/>
+      <SpriteAnim name="SlashNorth"	spriteIndexes="156,157,158,159,160,161"/>
+      <SpriteAnim name="CastEast"	  mode="once" spriteIndexes="39,40,41,42,43,44,45"/>
+      <SpriteAnim name="CastSouth"	mode="once" spriteIndexes="26,27,28,29,30,31,32"/>
+      <SpriteAnim name="CastWest"	  mode="once" spriteIndexes="13,14,15,16,17,18,19"/>
+      <SpriteAnim name="CastNorth"	mode="once" spriteIndexes="0,1,2,3,4,5,6"/>
+      <SpriteAnim name="Idle"		    spriteIndexes="130" fps="3"/>
+    </SpriteAnimSet>
+    <Equip slot="3" dropOnDeath="true" equippedDrawBounds="-0.6,-0.3,0.6,0.9"/>
+    <MinStats earth_atk="-50" water_atk="-50" fire_atk="-50"/>
+  </ItemDefinition>
+
+  <ItemDefinition name="Helm of Vulnerability">
+    <Size physicsRadius="0.4" localDrawBounds="-0.45,-0.65,0.45,0.25" tint="100,100,100"/>
+    <Movement>
+      <Walk speed="0"/>
+    </Movement>
+    <SpriteAnimSet spriteSheet="metal_helm_male.png" spriteLayout="13,21" fps="10">
+      <SpriteAnim name="MoveEast"		spriteIndexes="143,144,145,146,147,148,149,150,151"/>
+      <SpriteAnim name="MoveWest"		spriteIndexes="117,118,119,120,121,122,123,124,125"/>
+      <SpriteAnim name="MoveNorth"	spriteIndexes="105,106,107,108,109,110,111,112"/>
+      <SpriteAnim name="MoveSouth"	spriteIndexes="131,132,133,134,135,136,137,138"/>
+      <SpriteAnim name="SlashEast"	spriteIndexes="195,196,197,198,199,200"/>
+      <SpriteAnim name="SlashSouth"	spriteIndexes="182,183,184,185,186,187"/>
+      <SpriteAnim name="SlashWest"	spriteIndexes="169,170,171,172,173,174"/>
+      <SpriteAnim name="SlashNorth"	spriteIndexes="156,157,158,159,160,161"/>
+      <SpriteAnim name="CastEast"	  mode="once" spriteIndexes="39,40,41,42,43,44,45"/>
+      <SpriteAnim name="CastSouth"	mode="once" spriteIndexes="26,27,28,29,30,31,32"/>
+      <SpriteAnim name="CastWest"	  mode="once" spriteIndexes="13,14,15,16,17,18,19"/>
+      <SpriteAnim name="CastNorth"	mode="once" spriteIndexes="0,1,2,3,4,5,6"/>
+      <SpriteAnim name="Idle"		    spriteIndexes="130" fps="3"/>
+    </SpriteAnimSet>
+    <Equip slot="1" dropOnDeath="true" equippedDrawBounds="-0.6,-0.3,0.6,0.9"/>
+    <MinStats water_def="-40" earth_def="-40" fire_def="-40"/>
+  </ItemDefinition>
+  
+  <ItemDefinition name="HealthPotion">
+    <Size physicsRadius="0.3"  localDrawBounds="-0.15,-0.15,0.15,0.15"/>
+    <Movement>
+      <Walk speed="0"/>
+    </Movement>
+    <SpriteAnimSet spriteSheet="potion.png" spriteLayout="1,1" fps="5">
+      <SpriteAnim name="Idle"		spriteIndexes="0"/>
+    </SpriteAnimSet>
+    <Equip slot="-1" dropOnDeath="true"/>
+  </ItemDefinition>
+
+</ItemDefinitions>

@@ -1,0 +1,48 @@
+<LootTable>
+
+  <Loot
+  name="CommonFireItems"
+  items="Fire Hat, Fire Shirt">
+  </Loot>
+
+  <Loot
+  name="CommonWaterItems"
+  items="Water Hat, Water Shirt">
+  </Loot>
+
+  <Loot
+  name="CommonEarthItems"
+  items="Earth Hat, Earth Shirt">
+  </Loot>
+
+  <Loot
+  name="CommonHat"
+  items="Fire Hat,Water Hat,Earth Hat"
+  ></Loot>
+
+  <Loot
+  name="CommonChest"
+  items="Fire Shirt,Water Shirt,Earth Shirt,Bright Dress,Tranquil Dress,Violet Dress"
+  ></Loot>
+
+  <Loot
+  name="CommonItems"
+  items="Fire Hat,Water Hat,Earth Hat,Fire Shirt,Water Shirt,Earth Shirt,Bright Dress,Tranquil Dress,Violet Dress"
+  ></Loot>
+  
+  <Loot
+  name="RareItems"
+  items="Chain Mail of Protection,Iron Crown of Elements,Gambler's Hat,Helm of Vulnerability,Muted Dress"
+  ></Loot>
+
+  <Loot
+  name="PlayerSword"
+  items="Sword">
+  </Loot>
+
+  <Loot
+  name="Potion"
+  items="HealthPotion">
+  </Loot>
+
+</LootTable>

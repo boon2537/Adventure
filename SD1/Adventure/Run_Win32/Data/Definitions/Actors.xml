@@ -1,0 +1,204 @@
+<ActorDefinitions>
+
+  <ActorDefinition name="Player" faction="good">
+    <Size physicsRadius="0.25" localDrawBounds="-0.6,-0.3,0.6,0.9"/>
+    <Movement>
+      <Walk speed="1.6"/>
+    </Movement>
+    <Health max="500" start="500"/>
+    <Attack rate="2" meleeOffset="0.55,0.55" attackDelay="0.2" projectileName="PlayerMelee"/>
+    <SpriteAnimSet spriteSheet="Player.png" spriteLayout="13,21" fps="10">
+      <SpriteAnim name="MoveEast"		spriteIndexes="143,144,145,146,147,148,149,150,151"/>
+      <SpriteAnim name="MoveWest"		spriteIndexes="117,118,119,120,121,122,123,124,125"/>
+      <SpriteAnim name="MoveNorth"	spriteIndexes="105,106,107,108,109,110,111,112"/>
+      <SpriteAnim name="MoveSouth"	spriteIndexes="131,132,133,134,135,136,137,138"/>
+      <SpriteAnim name="SlashEast"	spriteIndexes="195,196,197,198,199,200"/>
+      <SpriteAnim name="SlashSouth"	spriteIndexes="182,183,184,185,186,187"/>
+      <SpriteAnim name="SlashWest"	spriteIndexes="169,170,171,172,173,174"/>
+      <SpriteAnim name="SlashNorth"	spriteIndexes="156,157,158,159,160,161"/>
+      <SpriteAnim name="Idle"		spriteIndexes="130" fps="3"/>
+    </SpriteAnimSet>
+    <Physics enableActorVsActor="true" mass="1"/>
+    <Stats fire_atk="0"/>
+    <Slot alt_slot="true"/>
+    <Loot name="CommonHat" chance="1"/>
+    <Loot name="CommonChest" chance="1"/>
+    <Loot name="PlayerSword" chance="1"/>
+  </ActorDefinition>
+
+  <ActorDefinition name="Skeleton" faction="evil">
+    <Size physicsRadius="0.25" localDrawBounds="-0.6,-0.3,0.6,0.9"/>
+    <Movement>
+      <Walk speed="1.0"/>
+    </Movement>
+    <Health max="60" start="60"/>
+    <Behaviors>
+      <Wander basePriority="0.2"/>
+      <Melee range="1.5" attackRate="0.5" attackDelay="1" projectileName="SkeletonMelee" offSet="0.55,0.55"/>
+      <Follow basePriority="0.5" distanceToFollow="4" target="Player" distanceMin="0.5"/>
+    </Behaviors>
+    <SpriteAnimSet spriteSheet="Skeleton.png" spriteLayout="13,21" fps="10">
+      <SpriteAnim name="MoveEast"		spriteIndexes="143,144,145,146,147,148,149,150,151"/>
+      <SpriteAnim name="MoveWest"		spriteIndexes="117,118,119,120,121,122,123,124,125"/>
+      <SpriteAnim name="MoveNorth"	spriteIndexes="105,106,107,108,109,110,111,112"/>
+      <SpriteAnim name="MoveSouth"	spriteIndexes="131,132,133,134,135,136,137,138"/>
+      <SpriteAnim name="SlashEast"	spriteIndexes="195,196,197,198,199,200"/>
+      <SpriteAnim name="SlashSouth"	spriteIndexes="182,183,184,185,186,187"/>
+      <SpriteAnim name="SlashWest"	spriteIndexes="169,170,171,172,173,174"/>
+      <SpriteAnim name="SlashNorth"	spriteIndexes="156,157,158,159,160,161"/>
+      <SpriteAnim name="Idle"		spriteIndexes="130" fps="3"/>
+    </SpriteAnimSet>
+    <Physics enableActorVsActor="true" mass="1"/>
+    <Stats fire_atk="7" water_atk="7" earth_atk="7"/>
+    <Loot name="RareItems" chance="0.2"/>
+    <Loot name="CommonItems" chance="0.3"/>
+    <Loot name="Potion" chance="0.2"/>
+    <Loot name="PlayerSword" chance="1"/>
+  </ActorDefinition>
+  
+    <ActorDefinition name="Skeleton Caster" faction="evil">
+    <Size physicsRadius="0.25" localDrawBounds="-0.6,-0.3,0.6,0.9"/>
+    <Movement>
+      <Walk speed="1.0"/>
+    </Movement>
+    <Health max="40" start="40"/>
+    <Behaviors>
+      <Wander basePriority="0.2"/>
+      <Shoot range="4.5" attackRate="0.5" attackDelay="0.4" projectileName="Arrow"/>
+      <Follow basePriority="0.5" distanceToFollow="4.5" target="Player" distanceMin="0.5"/>
+    </Behaviors>
+    <SpriteAnimSet spriteSheet="Skeleton.png" spriteLayout="13,21" fps="10">
+      <SpriteAnim name="MoveEast"		spriteIndexes="143,144,145,146,147,148,149,150,151"/>
+      <SpriteAnim name="MoveWest"		spriteIndexes="117,118,119,120,121,122,123,124,125"/>
+      <SpriteAnim name="MoveNorth"	spriteIndexes="105,106,107,108,109,110,111,112"/>
+      <SpriteAnim name="MoveSouth"	spriteIndexes="131,132,133,134,135,136,137,138"/>
+      <SpriteAnim name="CastEast"	  mode="once" spriteIndexes="39,40,41,42,43,44,45"/>
+      <SpriteAnim name="CastSouth"	mode="once" spriteIndexes="26,27,28,29,30,31,32"/>
+      <SpriteAnim name="CastWest"	  mode="once" spriteIndexes="13,14,15,16,17,18,19"/>
+      <SpriteAnim name="CastNorth"	mode="once" spriteIndexes="0,1,2,3,4,5,6"/>
+      <SpriteAnim name="Idle"		spriteIndexes="130" fps="3"/>
+    </SpriteAnimSet>
+    <Physics enableActorVsActor="true" mass="1"/>
+    <Stats fire_atk="5" water_atk="5" earth_atk="5"/>
+    <Loot name="RareItems" chance="0.2"/>
+    <Loot name="CommonItems" chance="0.3"/>
+    <Loot name="Potion" chance="0.2"/>
+  </ActorDefinition>
+
+  <ActorDefinition name="Fire Skeleton" faction="evil">
+    <Size physicsRadius="0.25" localDrawBounds="-0.6,-0.3,0.6,0.9" tint="210,150,150"/>
+    <Movement>
+      <Walk speed="1.0"/>
+    </Movement>
+    <Health max="140" start="140"/>
+    <Behaviors>
+      <Wander basePriority="0.2"/>
+      <Melee range="1.5" attackRate="0.5" attackDelay="1" projectileName="SkeletonMelee" offSet="0.55,0.55"/>
+      <Follow basePriority="0.5" distanceToFollow="4" target="Player" distanceMin="0.5"/>
+    </Behaviors>
+    <SpriteAnimSet spriteSheet="Skeleton.png" spriteLayout="13,21" fps="10">
+      <SpriteAnim name="MoveEast"		spriteIndexes="143,144,145,146,147,148,149,150,151"/>
+      <SpriteAnim name="MoveWest"		spriteIndexes="117,118,119,120,121,122,123,124,125"/>
+      <SpriteAnim name="MoveNorth"	spriteIndexes="105,106,107,108,109,110,111,112"/>
+      <SpriteAnim name="MoveSouth"	spriteIndexes="131,132,133,134,135,136,137,138"/>
+      <SpriteAnim name="SlashEast"	spriteIndexes="195,196,197,198,199,200"/>
+      <SpriteAnim name="SlashSouth"	spriteIndexes="182,183,184,185,186,187"/>
+      <SpriteAnim name="SlashWest"	spriteIndexes="169,170,171,172,173,174"/>
+      <SpriteAnim name="SlashNorth"	spriteIndexes="156,157,158,159,160,161"/>
+      <SpriteAnim name="Idle"		spriteIndexes="130" fps="3"/>
+    </SpriteAnimSet>
+    <Physics enableActorVsActor="true" mass="1"/>
+    <Stats fire_atk="30" fire_def="25" water_def="-10"/>
+    <Loot name="RareItems" chance="0.2"/>
+    <Loot name="CommonFireItems" chance="0.3"/>
+    <Loot name="Potion" chance="0.35"/>
+    <Loot name="PlayerSword" chance="1"/>
+  </ActorDefinition>
+
+  <ActorDefinition name="Water Skeleton" faction="evil">
+    <Size physicsRadius="0.25" localDrawBounds="-0.6,-0.3,0.6,0.9" tint="150,150,210"/>
+    <Movement>
+      <Walk speed="1.0"/>
+    </Movement>
+    <Health max="140" start="140"/>
+    <Behaviors>
+      <Wander basePriority="0.2"/>
+      <Melee range="1.5" attackRate="0.5" attackDelay="1" projectileName="SkeletonMelee" offSet="0.55,0.55"/>
+      <Follow basePriority="0.5" distanceToFollow="4" target="Player" distanceMin="0.5"/>
+    </Behaviors>
+    <SpriteAnimSet spriteSheet="Skeleton.png" spriteLayout="13,21" fps="10">
+      <SpriteAnim name="MoveEast"		spriteIndexes="143,144,145,146,147,148,149,150,151"/>
+      <SpriteAnim name="MoveWest"		spriteIndexes="117,118,119,120,121,122,123,124,125"/>
+      <SpriteAnim name="MoveNorth"	spriteIndexes="105,106,107,108,109,110,111,112"/>
+      <SpriteAnim name="MoveSouth"	spriteIndexes="131,132,133,134,135,136,137,138"/>
+      <SpriteAnim name="SlashEast"	spriteIndexes="195,196,197,198,199,200"/>
+      <SpriteAnim name="SlashSouth"	spriteIndexes="182,183,184,185,186,187"/>
+      <SpriteAnim name="SlashWest"	spriteIndexes="169,170,171,172,173,174"/>
+      <SpriteAnim name="SlashNorth"	spriteIndexes="156,157,158,159,160,161"/>
+      <SpriteAnim name="Idle"		spriteIndexes="130" fps="3"/>
+    </SpriteAnimSet>
+    <Physics enableActorVsActor="true" mass="1"/>
+    <Stats water_atk="30" water_def="25" earth_def="-10"/>
+    <Loot name="RareItems" chance="0.2"/>
+    <Loot name="CommonWaterItems" chance="0.3"/>
+    <Loot name="Potion" chance="0.35"/>
+    <Loot name="PlayerSword" chance="1"/>
+  </ActorDefinition>
+
+  <ActorDefinition name="Earth Skeleton" faction="evil">
+    <Size physicsRadius="0.25" localDrawBounds="-0.6,-0.3,0.6,0.9" tint="150,210,150"/>
+    <Movement>
+      <Walk speed="1.0"/>
+    </Movement>
+    <Health max="140" start="140"/>
+    <Behaviors>
+      <Wander basePriority="0.2"/>
+      <Melee range="1.5" attackRate="0.5" attackDelay="1" projectileName="SkeletonMelee" offSet="0.55,0.55"/>
+      <Follow basePriority="0.5" distanceToFollow="4" target="Player" distanceMin="0.5"/>
+    </Behaviors>
+    <SpriteAnimSet spriteSheet="Skeleton.png" spriteLayout="13,21" fps="10">
+      <SpriteAnim name="MoveEast"		spriteIndexes="143,144,145,146,147,148,149,150,151"/>
+      <SpriteAnim name="MoveWest"		spriteIndexes="117,118,119,120,121,122,123,124,125"/>
+      <SpriteAnim name="MoveNorth"	spriteIndexes="105,106,107,108,109,110,111,112"/>
+      <SpriteAnim name="MoveSouth"	spriteIndexes="131,132,133,134,135,136,137,138"/>
+      <SpriteAnim name="SlashEast"	spriteIndexes="195,196,197,198,199,200"/>
+      <SpriteAnim name="SlashSouth"	spriteIndexes="182,183,184,185,186,187"/>
+      <SpriteAnim name="SlashWest"	spriteIndexes="169,170,171,172,173,174"/>
+      <SpriteAnim name="SlashNorth"	spriteIndexes="156,157,158,159,160,161"/>
+      <SpriteAnim name="Idle"		spriteIndexes="130" fps="3"/>
+    </SpriteAnimSet>
+    <Physics enableActorVsActor="true" mass="1"/>
+    <Stats earth_atk="30" earth_def="25" fire_def="-10"/>
+    <Loot name="RareItems" chance="0.2"/>
+    <Loot name="CommonEarthItems" chance="0.3"/>
+    <Loot name="Potion" chance="0.35"/>
+    <Loot name="PlayerSword" chance="1"/>
+  </ActorDefinition>
+
+  <ActorDefinition name="Dark One" faction="evil">
+    <Size physicsRadius="0.25" localDrawBounds="-0.6,-0.3,0.6,0.9"/>
+    <Movement>
+      <Walk speed="1.0"/>
+    </Movement>
+    <Health max="200" start="200"/>
+    <Behaviors>
+      <Wander basePriority="0.2"/>
+      <Shoot range="7" attackRate="1" attackDelay="0.2" projectileName="Arrow"/>
+      <Follow basePriority="0.5" distanceToFollow="4" target="Player" distanceMin="0.5"/>
+    </Behaviors>
+    <SpriteAnimSet spriteSheet="Darkelf.png" spriteLayout="13,21" fps="10">
+      <SpriteAnim name="MoveEast"		spriteIndexes="143,144,145,146,147,148,149,150,151"/>
+      <SpriteAnim name="MoveWest"		spriteIndexes="117,118,119,120,121,122,123,124,125"/>
+      <SpriteAnim name="MoveNorth"	spriteIndexes="105,106,107,108,109,110,111,112"/>
+      <SpriteAnim name="MoveSouth"	spriteIndexes="131,132,133,134,135,136,137,138"/>
+      <SpriteAnim name="CastEast"	  mode="once" spriteIndexes="39,40,41,42,43,44,45"/>
+      <SpriteAnim name="CastSouth"	mode="once" spriteIndexes="26,27,28,29,30,31,32"/>
+      <SpriteAnim name="CastWest"	  mode="once" spriteIndexes="13,14,15,16,17,18,19"/>
+      <SpriteAnim name="CastNorth"	mode="once" spriteIndexes="0,1,2,3,4,5,6"/>
+      <SpriteAnim name="Idle"		spriteIndexes="130" fps="3"/>
+    </SpriteAnimSet>
+    <Physics enableActorVsActor="true" mass="100"/>
+    <Stats fire_atk="40" water_atk="40" earth_atk="40" fire_def="40" water_def="40" earth_def="40"/>
+  </ActorDefinition>
+
+</ActorDefinitions>

@@ -1,0 +1,50 @@
+<MapDefinitions>
+
+<MapDefinition name="Field" defaultTile= "Grass" width= "16~20" height= "12~14">
+  <GenerationSteps>
+    <FillAndEdge fillTile="Grass" edgeTile="StoneWall"/>
+    <PerlinNoise ifType="Grass" toType="DeadGrass" ifNoise="0.8~1.0"/>
+    <FillAndEdge edgeTile="StoneWall"/>
+    <Mutate toType="StoneWall" chanceToMutate="0.1" ifType=""/>
+    <CellularAutomata ifType="Grass" changeToType="FlowerBed" ifNeighborType="StoneWall" chanceToMutate="0.3"/>
+    <SpawnActor type="Skeleton" onTile="Grass" iterations="4"/>
+    <SpawnActor type="Skeleton Caster" onTile="Grass" iterations="4"/>
+    <SpawnActor type="Fire Skeleton" chanceToRun="0.33" onTile="Grass"/>
+    <SpawnActor type="Water Skeleton" chanceToRun="0.33" onTile="Grass"/>
+    <SpawnActor type="Earth Skeleton" chanceToRun="0.33" onTile="Grass"/>
+    <SpawnItem type="HealthPotion" onTile="Grass" iterations="1"/>
+  </GenerationSteps>
+</MapDefinition>
+
+<MapDefinition name="RockyHill" defaultTile="Grass" width= "20~24" height= "14~16">
+  <GenerationSteps>
+    <FillAndEdge fillTile="Grass" edgeTile="StoneWall"/>
+    <Mutate iterations="1~2" chanceToRun="1.0" toType="StoneWall" chanceToMutate="0.1" ifType=""/>
+    <CellularAutomata ifType="Grass" changeToType="FlowerBed" ifNeighborType="StoneWall" chanceToMutate="0.3"/>
+    <SpawnActor type="Skeleton" onTile="Grass" iterations="5"/>
+    <SpawnActor type="Skeleton Caster" onTile="Grass" iterations="5"/>
+    <SpawnActor type="Fire Skeleton" chanceToRun="1" onTile="Grass"/>
+    <SpawnActor type="Water Skeleton" chanceToRun="1" onTile="Grass"/>
+    <SpawnActor type="Earth Skeleton" chanceToRun="1" onTile="Grass"/>
+    <SpawnItem type="Muted Dress" onTile="Grass"/>
+    <SpawnItem type="HealthPotion" onTile="Grass" iterations="2"/>
+  </GenerationSteps>
+</MapDefinition>
+
+<MapDefinition name="Forest" defaultTile= "Grass" width= "18~22" height= "16~18">
+  <GenerationSteps>
+    <FillAndEdge fillTile="Grass" edgeTile="StoneWall"/>
+    <PerlinNoise ifType="Grass" toType="DeadGrass" ifNoise="0.8~1.0"/>
+    <FillAndEdge edgeTile="StoneWall"/>
+    <Mutate toType="StoneWall" chanceToMutate="0.05" ifType=""/>
+    <CellularAutomata ifType="Grass" changeToType="FlowerBed" ifNeighborType="StoneWall" chanceToMutate="0.3"/>
+    <SpawnActor type="Skeleton Caster" onTile="Grass" iterations="8"/>
+    <SpawnActor type="Fire Skeleton" iterations="2" chanceToRun="1" onTile="Grass"/>
+    <SpawnActor type="Water Skeleton" iterations="2" chanceToRun="1" onTile="Grass"/>
+    <SpawnActor type="Earth Skeleton" iterations="2" chanceToRun="1" onTile="Grass"/>
+    <SpawnItem type="Helm of Vulnerability" onTile="Grass"/>
+    <SpawnItem type="HealthPotion" onTile="Grass" iterations="2"/>
+  </GenerationSteps>
+</MapDefinition>
+
+</MapDefinitions>

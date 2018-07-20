@@ -1,0 +1,36 @@
+<ProjectileDefinitions>
+
+  <ProjectileDefinition name="Arrow">
+    <Size physicsRadius="0.15" drawRadius="0.2"/>
+    <Movement>
+      <Fly speed="3.0"/>
+    </Movement>
+    <Damage liveTime="30" mode="other"/>
+    <SpriteAnimSet spriteSheet="energyBall.png" spriteLayout="1,1">
+      <SpriteAnim name="Idle" spriteIndexes="0" autoOrient="true"/>
+    </SpriteAnimSet>
+  </ProjectileDefinition>
+
+  <ProjectileDefinition name="PlayerMelee">
+    <Size physicsRadius="0.8" drawRadius="0"/>
+    <Movement>
+      <Fly speed="0"/>
+    </Movement>
+    <Damage liveTime="0.3" mode="other"/>
+    <SpriteAnimSet spriteSheet="Blank.png" spriteLayout="1,1">
+      <SpriteAnim name="Idle" spriteIndexes="0" autoOrient="true"/>
+    </SpriteAnimSet>
+  </ProjectileDefinition>
+
+  <ProjectileDefinition name="SkeletonMelee">
+    <Size physicsRadius="0.75" drawRadius="0"/>
+    <Movement>
+      <Fly speed="0"/>
+    </Movement>
+    <Damage liveTime="0.2" mode="other"/>
+    <SpriteAnimSet spriteSheet="Blank.png" spriteLayout="1,1">
+      <SpriteAnim name="Idle" spriteIndexes="0" autoOrient="true"/>
+    </SpriteAnimSet>
+  </ProjectileDefinition>
+
+</ProjectileDefinitions>

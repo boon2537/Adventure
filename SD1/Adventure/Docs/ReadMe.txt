@@ -1,30 +1,6 @@
 Saddha Santanaporn
 12/7/2017
 
-Known Issues: None
-
-Completed Feature:
-- glDrawArrays instead of glBegin
-- Map::RenderTiles() optimized
-- Two sprites per Tile
-- Entity sorted draw order
-- Actor-vs-Actor disc corrective
-- HeatMap
-- Stats
-- Combat (fully-featured)
-- Items (affect stats) 
-- Inventory and Equipment (get, drop, equip)
-- Loot (data-driven control)
-- MapGenStep_SpawnActor
-- MapGenStep_SpawnItem
-- MapGenStep_CellularAutomata
-- MapGenStep_PerlinNoise
-- UI (main menu, inventory menu)
-- HUD (health bars, onscreen status info)
-- Basic (Dijkstra) pathfinding
-- Behavior / Utility system
-- Custom features: Run, Consume potion, Select enemy, Transfer an item to enemy
-
 How to Use:
 Left joy stick: Move
 X: Attack
